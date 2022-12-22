@@ -105,6 +105,10 @@ git pull https://github.com/RitikChahar/Git-GitHub.git
 ```
 touch .gitignore
 ```
+### To add subdirectories to .gitignore
+```
+**/directory/subdirectory
+```
 ## Pushing a repository to GitHub
 ### 1. Create a new repository on GitHub.
 ### 2. To add origin to the git repository
