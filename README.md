@@ -12,11 +12,11 @@ git --version
 ## Configuring the username and email
 ### To configure username
 ```
-git config --global user.name
+git config --global user.name "name"
 ```
 ### To configure email
 ```
-git config --global user.email
+git config --global user.email "email"
 ```
 ### To configure username and email directly in the config file
 ```
