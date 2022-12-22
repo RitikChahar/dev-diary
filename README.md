@@ -124,3 +124,12 @@ git remote -v
 git branch -M master
 git push
 ```
+### 5. To push code to a specific branch
+#### If the name of local branch and remote branch is same 
+```
+git push origin branchName
+```
+#### If the name of local branch and remote branch is different
+```
+git push origin localBranchName:remoteBranchName
+```
