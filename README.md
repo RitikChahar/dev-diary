@@ -35,8 +35,13 @@ git config --global user.name
 git config --global user.email
 ```
 ## Creating a git repository 
+### To create a git repository in existing directory
 ```
 git init
+```
+### To create a new directory and git repository
+```
+git init name
 ```
 ## Checking the status of the branch
 ```
