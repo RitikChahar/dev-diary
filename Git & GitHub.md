@@ -133,3 +133,7 @@ git push origin branchName
 ```
 git push origin localBranchName:remoteBranchName
 ```
+### 6. If you created a repository on github with some initial commit and now you want to overwrite them using local repository
+```
+git push -f origin branchName
+```
