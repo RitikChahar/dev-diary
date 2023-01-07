@@ -137,3 +137,7 @@ git push origin localBranchName:remoteBranchName
 ```
 git push -f origin branchName
 ```
+### 7. Delete a git repository
+```
+rm -fr .git
+```
