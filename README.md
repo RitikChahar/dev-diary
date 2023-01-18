@@ -89,6 +89,10 @@ git checkout hashCode
 ```
 git merge branchName
 ```
+## Removing Untracked Files and Directories
+```
+git clean -fd
+```
 ## Deleting a branch
 ```
 git branch --delete branchName
