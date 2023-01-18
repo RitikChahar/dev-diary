@@ -89,6 +89,10 @@ git checkout hashCode
 ```
 git merge branchName
 ```
+## Restoring changes made in files
+```
+git restore .
+```
 ## Removing Untracked Files and Directories
 ```
 git clean -fd
