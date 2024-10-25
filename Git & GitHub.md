@@ -149,3 +149,11 @@ git push -f origin branchName
 ```
 rm -fr .git
 ```
+### 8. Reset all changes in tracked files after last commit
+```
+git reset HEAD --hard
+```
+### 9. Delete files created after the lat commit
+```
+git clean -fd
+```
