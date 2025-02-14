@@ -153,7 +153,11 @@ rm -fr .git
 ```
 git reset HEAD --hard
 ```
-### 9. Delete files created after the lat commit
+### 9. Delete files created after the last commit
 ```
 git clean -fd
+```
+### 10. Unstage staged changes
+```
+git reset
 ```
