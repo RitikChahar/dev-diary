@@ -161,3 +161,7 @@ git clean -fd
 ```
 git reset
 ```
+### 11. Discard Unstaged Changes
+```
+git restore .
+```
