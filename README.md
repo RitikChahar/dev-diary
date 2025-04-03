@@ -165,3 +165,7 @@ git reset
 ```
 git restore .
 ```
+### 12. Mirror code to another repository
+```
+git push --mirror https://github.com/your-username/new-repo.git
+```
