@@ -173,3 +173,7 @@ git push --mirror https://github.com/your-username/new-repo.git
 ```
 git reset --hard HEAD^
 ```
+### 14. Overwrite remote branch 
+```
+git push origin main --force
+```
