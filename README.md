@@ -169,3 +169,7 @@ git restore .
 ```
 git push --mirror https://github.com/your-username/new-repo.git
 ```
+### 13. Delete last commit 
+```
+git reset --hard HEAD^
+```
