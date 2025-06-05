@@ -177,3 +177,7 @@ git reset --hard HEAD^
 ```
 git push origin main --force
 ```
+### 15. Check Last Commit 
+```
+git show --summary
+```
