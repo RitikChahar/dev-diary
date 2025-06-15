@@ -181,3 +181,9 @@ git push origin main --force
 ```
 git show --summary
 ```
+### 16. Reset local main to match origin/main 
+```
+git fetch origin
+git checkout main
+git reset --hard origin/main
+```
