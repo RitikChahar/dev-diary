@@ -187,3 +187,7 @@ git fetch origin
 git checkout main
 git reset --hard origin/main
 ```
+### 17. Untrack all files 
+```
+git rm -r --cached .
+```
