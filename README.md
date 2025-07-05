@@ -191,3 +191,7 @@ git reset --hard origin/main
 ```
 git rm -r --cached .
 ```
+### 18. Force push to remote repository 
+```
+git push -f
+```
