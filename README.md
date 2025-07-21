@@ -195,3 +195,7 @@ git rm -r --cached .
 ```
 git push -f
 ```
+### 19. Change last commit message 
+```
+git commit --amend -m "New commit message"
+```
