@@ -9,6 +9,7 @@ A personal, no-fluff collection of notes, shortcuts, and commands for everyday d
 | Git         | Essential Git commands and tips      | [git.md](git.md) |
 | Docker      | Common Docker & Docker Compose usage | [docker.md](docker.md) |
 | Postman     | API testing tips and workflows       | [postman.md](postman.md) |
+| Azure Blob Storage   | Guide to using Azure Blob Storage | [azure_blob_storage.md](azure_blob_storage.md) |
 
 ## 📌 Purpose
 
