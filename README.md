@@ -10,6 +10,7 @@ A personal, no-fluff collection of notes, shortcuts, and commands for everyday d
 | Docker      | Common Docker & Docker Compose usage | [docker.md](docker.md) |
 | Postman     | API testing tips and workflows       | [postman.md](postman.md) |
 | Azure Blob Storage   | Guide to using Azure Blob Storage | [azure_blob_storage.md](azure_blob_storage.md) |
+| Async API   | Async APIs with background tasks     | [async_api.md](async_api.md) |
 
 ## 📌 Purpose
 
