@@ -199,3 +199,7 @@ git push -f
 ```
 git commit --amend -m "New commit message"
 ```
+### 20. Delete last commit but keep changes (soft reset)
+```
+git reset --soft HEAD~1
+```
