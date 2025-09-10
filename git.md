@@ -203,3 +203,7 @@ git commit --amend -m "New commit message"
 ```
 git reset --soft HEAD~1
 ```
+### 21. Unstage files
+```
+git restore --staged filename
+```
