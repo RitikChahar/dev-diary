@@ -1,7 +1,7 @@
 # Docker
 
 1. **Installing Docker**
-   
+
    1.1. Download and install Docker:
 
    ```bash
@@ -15,7 +15,7 @@
    ```
 
 2. **Managing Docker Images**
-   
+
    2.1. List local images:
 
    ```bash
@@ -41,7 +41,7 @@
    ```
 
 3. **Working with Containers**
-   
+
    3.1. Run a container in detached mode:
 
    ```bash
@@ -85,7 +85,7 @@
    ```
 
 4. **Docker Compose (v1)**
-   
+
    4.1. Start services and build images if needed:
 
    ```bash
@@ -128,8 +128,22 @@
    docker-compose build <SERVICE_NAME>
    ```
 
+   4.8. **Apply environment changes / recreate containers (detached)**
+   Use this after you change `docker-compose.yml` or a referenced `.env` — it recreates affected containers:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+   4.9. **Verify an environment variable inside a running container**
+   Replace `<container_name>` with your container (from `docker ps`):
+
+   ```bash
+   docker exec -it <container_name> printenv OPENAI_CHAT_MODEL
+   ```
+
 5. **System Maintenance**
-   
+
    5.1. Show disk and resource usage:
 
    ```bash
