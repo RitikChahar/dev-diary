@@ -1,209 +1,219 @@
 # Git - Global Information Tracker
 
-## Downloading and Installing Git
+## 1. Downloading and Installing Git
 ### Download Git from the following URL and install it with default settings
 ```
 https://git-scm.com/downloads
 ```
-## Checking the installed version of Git
+
+## 2. Checking the Installed Version of Git
 ```
 git --version
 ```
-## Configuring the username and email
-### To configure username
+
+## 3. Configuring Git
+### 3.1 Configure username
 ```
 git config --global user.name "name"
 ```
-### To configure email
+### 3.2 Configure email
 ```
 git config --global user.email "email"
 ```
-### To configure username and email directly in the config file
+### 3.3 Configure username and email directly in the config file
 ```
 git config --global --edit
 ```
 1. Press "i" to edit the config file.
 2. After making the changes Press "ESC" to save the changes.
 3. Type ":wq" to exit the editor.
-## Checking the configured username and email
-### Configured username
+
+### 3.4 Check configured username
 ```
 git config --global user.name 
 ```
-### Configured email
+### 3.5 Check configured email
 ```
 git config --global user.email
 ```
-## Creating a git repository 
-### To create a git repository in existing directory
+
+## 4. Creating a Git Repository
+### 4.1 Create a git repository in existing directory
 ```
 git init
 ```
-### To create a new directory and git repository
+### 4.2 Create a new directory and git repository
 ```
 git init name
 ```
-## Checking the status of the branch
+
+## 5. Working with Files
+### 5.1 Check the status of the branch
 ```
 git status
 ```
-## Adding files to the staging area
-### To add a file to the staging area
+### 5.2 Add a file to the staging area
 ```
 git add fileName
 ```
-### To add all the files to the staging area
+### 5.3 Add all files to the staging area
 ```
 git add .
 ```
-## Commiting changes 
+### 5.4 Unstage staged changes
 ```
-git commit -m "message"
+git reset
 ```
-## Checking commit log
+### 5.5 Unstage specific files
 ```
-git log
+git restore --staged filename
 ```
-## Checking branches
-```
-git branch
-```
-## Creating a new branch
-### To create a new branch
-```
-git branch branchName
-```
-### To create a new branch and switching to it directly
-```
-git checkout -b branchName
-```
-## Switching to a different branch
-```
-git checkout branchName
-```
-## Switching to a different version
-```
-git checkout hashCode
-```
-## Merging a branch
-```
-git merge branchName
-```
-## Restoring changes made in files
+### 5.6 Discard unstaged changes
 ```
 git restore .
 ```
-## Removing Untracked Files and Directories
+### 5.7 Remove untracked files and directories
 ```
 git clean -fd
 ```
-## Deleting a branch
+### 5.8 Untrack all files
+```
+git rm -r --cached .
+```
+
+## 6. Committing Changes
+### 6.1 Commit changes
+```
+git commit -m "message"
+```
+### 6.2 Check commit log
+```
+git log
+```
+### 6.3 Check last commit
+```
+git show --summary
+```
+### 6.4 Change last commit message
+```
+git commit --amend -m "New commit message"
+```
+### 6.5 Delete last commit (hard reset)
+```
+git reset --hard HEAD^
+```
+### 6.6 Delete last commit but keep changes (soft reset)
+```
+git reset --soft HEAD~1
+```
+### 6.7 Reset all changes in tracked files after last commit
+```
+git reset HEAD --hard
+```
+
+## 7. Working with Branches
+### 7.1 Check branches
+```
+git branch
+```
+### 7.2 Create a new branch
+```
+git branch branchName
+```
+### 7.3 Create a new branch and switch to it directly
+```
+git checkout -b branchName
+```
+### 7.4 Switch to a different branch
+```
+git checkout branchName
+```
+### 7.5 Switch to a different version
+```
+git checkout hashCode
+```
+### 7.6 Merge a branch
+```
+git merge branchName
+```
+### 7.7 Delete a branch
 ```
 git branch --delete branchName
 ```
-## Cloning a repository
+
+## 8. Working with Remote Repositories
+### 8.1 Clone a repository
 ```
 git clone https://github.com/RitikChahar/Git-GitHub.git
 ```
-## Pulling changes from a repository
-```
-git pull https://github.com/RitikChahar/Git-GitHub.git
-```
-## Creating .gitignore file
-```
-touch .gitignore
-```
-### To add subdirectories to .gitignore
-```
-**/directory/subdirectory
-```
-## Pushing a repository to GitHub
-### 1. Create a new repository on GitHub.
-### 2. To add origin to the git repository
+### 8.2 Add origin to the git repository
 ```
 git remote add origin https://github.com/RitikChahar/Git-GitHub.git 
 ```
-### 3. To check origin
+### 8.3 Check origin
 ```
 git remote -v
 ```
-### 4. To push code to GitHub
+### 8.4 Pull changes from a repository
+```
+git pull https://github.com/RitikChahar/Git-GitHub.git
+```
+### 8.5 Pull changes with rebase (avoids merge commits)
+```
+git pull --rebase
+```
+### 8.6 Push code to GitHub
 ```
 git branch -M master
 git push
 ```
-### 5. To push code to a specific branch
-#### If the name of local branch and remote branch is same 
+### 8.7 Push code to a specific branch (same name)
 ```
 git push origin branchName
 ```
-#### If the name of local branch and remote branch is different
+### 8.8 Push code to a specific branch (different name)
 ```
 git push origin localBranchName:remoteBranchName
 ```
-### 6. If you created a repository on github with some initial commit and now you want to overwrite them using local repository
+### 8.9 Force push to overwrite remote repository
 ```
 git push -f origin branchName
 ```
-### 7. Delete a git repository
+### 8.10 Force push to remote repository
 ```
-rm -fr .git
+git push -f
 ```
-### 8. Reset all changes in tracked files after last commit
-```
-git reset HEAD --hard
-```
-### 9. Delete files created after the last commit
-```
-git clean -fd
-```
-### 10. Unstage staged changes
-```
-git reset
-```
-### 11. Discard Unstaged Changes
-```
-git restore .
-```
-### 12. Mirror code to another repository
-```
-git push --mirror https://github.com/your-username/new-repo.git
-```
-### 13. Delete last commit 
-```
-git reset --hard HEAD^
-```
-### 14. Overwrite remote branch 
+### 8.11 Overwrite remote branch
 ```
 git push origin main --force
 ```
-### 15. Check Last Commit 
+### 8.12 Mirror code to another repository
 ```
-git show --summary
+git push --mirror https://github.com/your-username/new-repo.git
 ```
-### 16. Reset local main to match origin/main 
+### 8.13 Reset local main to match origin/main
 ```
 git fetch origin
 git checkout main
 git reset --hard origin/main
 ```
-### 17. Untrack all files 
+
+## 9. Working with .gitignore
+### 9.1 Create .gitignore file
 ```
-git rm -r --cached .
+touch .gitignore
 ```
-### 18. Force push to remote repository 
+### 9.2 Add subdirectories to .gitignore
 ```
-git push -f
+**/directory/subdirectory
 ```
-### 19. Change last commit message 
+
+## 10. Advanced Operations
+### 10.1 View reference logs (history of HEAD movements)
 ```
-git commit --amend -m "New commit message"
+git reflog
 ```
-### 20. Delete last commit but keep changes (soft reset)
+### 10.2 Delete a git repository
 ```
-git reset --soft HEAD~1
-```
-### 21. Unstage files
-```
-git restore --staged filename
+rm -fr .git
 ```
