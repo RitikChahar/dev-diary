@@ -142,6 +142,22 @@
    docker exec -it <container_name> printenv OPENAI_CHAT_MODEL
    ```
 
+   4.10. **Start services (explicitly listed as requested)**
+   A common shorthand to start services in detached mode (keeps this command listed separately as requested):
+
+   ```bash
+   docker-compose up -d
+   ```
+
+   4.11. **Stop and remove containers, networks, and volumes**
+   Use this when you want to bring the Compose environment down and also remove named volumes declared in the Compose file:
+
+   ```bash
+   docker-compose down -v
+   ```
+
+   > Note: `-v` removes volumes declared in `volumes:` of the compose file (data stored in those volumes will be deleted).
+
 5. **System Maintenance**
 
    5.1. Show disk and resource usage:
