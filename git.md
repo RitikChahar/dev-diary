@@ -137,9 +137,25 @@ git checkout hashCode
 git merge branchName
 ```
 ### 7.7 Delete a branch
+
+7.7.1 - Deletes a local branch only if it has been fully merged
+
 ```
-git branch --delete branchName
+git branch -d branch-name
 ```
+
+7.7.2 - Force-deletes a local branch even if it has unmerged changes
+
+```
+git branch -D branch-name
+```
+
+7.7.3 - Removes the branch from the remote origin
+
+```
+git push origin --delete branch-name
+```
+
 
 ## 8. Working with Remote Repositories
 ### 8.1 Clone a repository
